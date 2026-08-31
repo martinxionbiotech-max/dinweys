@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-05-23",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is all quinoa kosher for Passover?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Only quinoa processed in chametz-free facilities and labeled “Kosher for Passover” is allowed."}}, {"@type": "Question", "name": "Is quinoa considered kitniyot?", "acceptedAnswer": {"@type": "Answer", "text": "Some Ashkenazi authorities initially considered it as kitniyot, but many now allow it when certified."}}, {"@type": "Question", "name": "Can quinoa ferment like chametz grains?", "acceptedAnswer": {"@type": "Answer", "text": "No. It does not undergo spontaneous fermentation when mixed with water."}}, {"@type": "Question", "name": "Is quinoa flour kosher for Passover baking?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, if certified. It’s used for cakes and unleavened bread alternatives."}}, {"@type": "Question", "name": "What’s the best quinoa for Passover?", "acceptedAnswer": {"@type": "Answer", "text": "White quinoa is most popular due to its mild flavor and clean processing."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"es\" href=\"https://dinweys.com/es/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/is-quinoa-chametz/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="es" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="es" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">Tabla de contenido</p>

@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-05-23",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "เป็นควินัวโคเชอร์ทั้งหมดสำหรับเทศกาลปัสกา?", "acceptedAnswer": {"@type": "Answer", "text": "ไม่จำเป็น. เฉพาะควินัวที่แปรรูปในโรงงานปลอดสารชาเมตซ์และมีป้ายกำกับ “โคเชอร์สำหรับเทศกาลปัสกา” ได้รับอนุญาต."}}, {"@type": "Question", "name": "ควินัวถือเป็นกิตติยศหรือเปล่าคะ?", "acceptedAnswer": {"@type": "Answer", "text": "ในตอนแรกเจ้าหน้าที่อาซเกนาซีบางส่วนพิจารณาว่าเป็นกิตติยศ, แต่ปัจจุบันหลายคนอนุญาตเมื่อได้รับการรับรองแล้ว."}}, {"@type": "Question", "name": "ควินัวสามารถหมักเหมือนเมล็ดชาเมตซ์ได้หรือไม่?", "acceptedAnswer": {"@type": "Answer", "text": "เลขที่. ไม่ผ่านการหมักตามธรรมชาติเมื่อผสมกับน้ำ."}}, {"@type": "Question", "name": "เป็นแป้งควินัวโคเชอร์สำหรับการอบปัสกา?", "acceptedAnswer": {"@type": "Answer", "text": "ใช่, ถ้าได้รับการรับรอง. ใช้สำหรับเค้กและขนมปังไร้เชื้อ."}}, {"@type": "Question", "name": "quinoa ที่ดีที่สุดสำหรับเทศกาลปัสกาคืออะไร?", "acceptedAnswer": {"@type": "Answer", "text": "ควินัวขาวเป็นที่นิยมมากที่สุดเนื่องจากมีรสชาติอ่อนๆ และผ่านกระบวนการที่สะอาด."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"th\" href=\"https://dinweys.com/th/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/is-quinoa-chametz/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="th" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="th" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">สารบัญ</p>

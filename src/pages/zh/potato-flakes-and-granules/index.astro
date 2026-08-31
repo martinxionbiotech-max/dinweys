@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-12-26",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "马铃薯片和颗粒有什么区别?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯片呈片状且部分糊化, 理想的零食和复合产品成分. 颗粒完全糊化, 较小, 更顺畅, 适用于即食土豆泥产品."}}, {"@type": "Question", "name": "哪种产品更适合土豆泥菜肴?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯颗粒是马铃薯泥菜肴的首选，因为它们已完全煮熟，并且在再水化时会产生更奶油般的质地."}}, {"@type": "Question", "name": "土豆片可以直接吃吗?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯片通常未完全煮熟，旨在用作进一步加工的原料, 而不是直接消费."}}, {"@type": "Question", "name": "马铃薯片和颗粒的加工有何不同?", "acceptedAnswer": {"@type": "Answer", "text": "两种产品具有相似的加工步骤, 但将薄片滚筒干燥以生产片状薄片, 而颗粒被干燥/附聚以产生小颗粒, 均匀颗粒."}}, {"@type": "Question", "name": "马铃薯全片的主要用途有哪些?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯片用于零食, 烘焙产品, 复合混合物, 以及作为水结合和质地改性的功能成分."}}, {"@type": "Question", "name": "马铃薯颗粒的主要用途有哪些?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯颗粒用于即食土豆泥, 汤, 准备好的饭菜, 以及其他需要光滑的产品, 奶油质地."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"zh\" href=\"https://dinweys.com/zh/potato-flakes-and-granules/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/potato-flakes-and-granules/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/potato-flakes-and-granules/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="zh-CN" ogImage="/images/Potato-Flakes-Granules-1024x682.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="zh-CN" ogImage="/images/Potato-Flakes-Granules-1024x682.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">目录</p>

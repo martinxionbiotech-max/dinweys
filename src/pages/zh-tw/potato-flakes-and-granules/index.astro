@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-12-26",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "馬鈴薯片和顆粒有什麼區別?", "acceptedAnswer": {"@type": "Answer", "text": "馬鈴薯片呈片狀且部分糊化, 理想的零食和複合產品成分. 顆粒完全糊化, 較小, 更順暢, 適用於即食馬鈴薯泥產品."}}, {"@type": "Question", "name": "哪種產品更適合土豆泥菜餚?", "acceptedAnswer": {"@type": "Answer", "text": "馬鈴薯顆粒是馬鈴薯泥菜餚的首選，因為它們已完全煮熟，並且在再水化時產生更奶油般的質地."}}, {"@type": "Question", "name": "洋芋片可以直接吃嗎?", "acceptedAnswer": {"@type": "Answer", "text": "馬鈴薯片通常未完全煮熟，旨在用作進一步加工的原料, 而不是直接消費."}}, {"@type": "Question", "name": "馬鈴薯片和顆粒的加工有何不同?", "acceptedAnswer": {"@type": "Answer", "text": "兩種產品有相似的加工步驟, 但將薄片滾筒乾燥以產生片狀薄片, 而顆粒被乾燥/附聚以產生小顆粒, 均勻顆粒."}}, {"@type": "Question", "name": "馬鈴薯全片的主要用途有哪些?", "acceptedAnswer": {"@type": "Answer", "text": "馬鈴薯片用於零食, 烘焙產品, 複合混合物, 以及作為水結合和質地改性的功能成分."}}, {"@type": "Question", "name": "馬鈴薯顆粒的主要用途有哪些?", "acceptedAnswer": {"@type": "Answer", "text": "馬鈴薯顆粒用於即食馬鈴薯泥, 湯, 準備好的飯菜, 以及其他需要光滑的產品, 奶油質地."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"zh-tw\" href=\"https://dinweys.com/zh-tw/potato-flakes-and-granules/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/potato-flakes-and-granules/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/potato-flakes-and-granules/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="zh-TW" ogImage="/images/Potato-Flakes-Granules-1024x682.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="zh-TW" ogImage="/images/Potato-Flakes-Granules-1024x682.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">目錄</p>

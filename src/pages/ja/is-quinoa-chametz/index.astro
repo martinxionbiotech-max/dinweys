@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-05-23",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "過ぎ越しの祭りにはキヌアはすべてコーシャですか?", "acceptedAnswer": {"@type": "Answer", "text": "必ずしもではありません. チャメッツを含まない施設で加工され、ラベルが貼られたキヌアのみ “過ぎ越しの祭のためのコーシャ” 許可されています."}}, {"@type": "Question", "name": "キヌアはキトニヨトとみなされますか?", "acceptedAnswer": {"@type": "Answer", "text": "一部のアシュケナージ当局は当初、それをキトニヨトと考えていた, しかし、現在では多くの企業が認定を受ければそれを許可しています."}}, {"@type": "Question", "name": "キヌアはチャメッツ粒のように発酵できるか?", "acceptedAnswer": {"@type": "Answer", "text": "いいえ. 水と混ぜても自然発酵しません。."}}, {"@type": "Question", "name": "過ぎ越しのパンを焼くためのキヌア粉はコーシャです?", "acceptedAnswer": {"@type": "Answer", "text": "はい, 認定されていれば. ケーキや種なしパンの代替品に使用されます."}}, {"@type": "Question", "name": "過ぎ越しの祭りに最適なキヌアは何ですか?", "acceptedAnswer": {"@type": "Answer", "text": "ホワイトキヌアは、マイルドな風味とクリーンな加工により最も人気があります。."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"ja\" href=\"https://dinweys.com/ja/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/is-quinoa-chametz/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="ja" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="ja" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">目次</p>

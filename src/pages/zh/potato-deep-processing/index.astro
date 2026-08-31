@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-12-26",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "什么是马铃薯深加工?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯深加工是将原马铃薯加工成高附加值原料（例如马铃薯片）的工业转化, 颗粒, 淀粉, 和用于食品制造的纤维."}}, {"@type": "Question", "name": "马铃薯深加工主要产品有哪些?", "acceptedAnswer": {"@type": "Answer", "text": "主要产品包括马铃薯片, 颗粒, 马铃薯淀粉, 和马铃薯纤维, 每个服务于不同的工业应用，例如零食, 面包店, 准备好的饭菜, 和酱汁."}}, {"@type": "Question", "name": "如何为我的应用选择合适的马铃薯成分?", "acceptedAnswer": {"@type": "Answer", "text": "考虑吸水率等因素, 质地要求, 应用类型 (零食, 汤, 面包店), 以及您想要的功能特性. 建议查阅产品数据表和技术支持."}}, {"@type": "Question", "name": "使用马铃薯片有什么好处?", "acceptedAnswer": {"@type": "Answer", "text": "马铃薯片提供快速补水作用, 质地一致, 以及工业配方的便利性. 它们通常用于即食土豆泥, 零食, 和方便食品."}}, {"@type": "Question", "name": "马铃薯深加工厂应遵循哪些质量标准?", "acceptedAnswer": {"@type": "Answer", "text": "工厂应遵守 ISO 等食品安全和质量认证 22000, FSSC 22000, 危害分析及关键控制点, 并定期进行微生物和化学测试，以确保产品的安全性和一致性."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"zh\" href=\"https://dinweys.com/zh/potato-deep-processing/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/potato-deep-processing/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/potato-deep-processing/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="zh-CN" ogImage="/images/Potato-Deep-Processing.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="zh-CN" ogImage="/images/Potato-Deep-Processing.jpg" author="Martin.Wang"  datePublished="2025-12-26" dateModified="2025-12-26">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">目录</p>

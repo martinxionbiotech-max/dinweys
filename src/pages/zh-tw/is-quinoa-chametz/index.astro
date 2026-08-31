@@ -9,9 +9,10 @@ const page = {
   author: "Martin.Wang",
   date: "2025-05-23",
 };
+const faqJson = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "逾越節的藜麥都是猶太潔食嗎?", "acceptedAnswer": {"@type": "Answer", "text": "未必. 僅在無 Chametz 的設施中加工並貼有標籤的藜麥 “逾越節猶太潔食” 被允許."}}, {"@type": "Question", "name": "藜麥被認為是基尼約特嗎?", "acceptedAnswer": {"@type": "Answer", "text": "一些德系猶太人當局最初認為它是 kitniyot, 但現在許多人在獲得認證後允許這樣做."}}, {"@type": "Question", "name": "藜麥可以像 Chametz 穀物一樣發酵嗎?", "acceptedAnswer": {"@type": "Answer", "text": "不. 與水混合時不發生自然發酵."}}, {"@type": "Question", "name": "藜麥粉適合逾越節烘焙嗎?", "acceptedAnswer": {"@type": "Answer", "text": "是的, 如果經過認證. 它用於蛋糕和無酵麵包的替代品."}}, {"@type": "Question", "name": "逾越節最好的藜麥是什麼?", "acceptedAnswer": {"@type": "Answer", "text": "白藜麥因其溫和的風味和清潔的加工而最受歡迎."}}]};
 const hreflang = "<link rel=\"alternate\" hreflang=\"zh-tw\" href=\"https://dinweys.com/zh-tw/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/is-quinoa-chametz/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/is-quinoa-chametz/\" />";
 ---
-<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" lang="zh-TW" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="article" jsonLd={faqJson} lang="zh-TW" ogImage="/images/Is-Quinoa-Chametz-1.jpg" author="Martin.Wang"  datePublished="2025-05-23" dateModified="2025-05-23">
   <article class="page-content">
     <h1 class="page-title">{page.h1}</h1>
     <div class="entry-content" set:html={`<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction"><div class="ez-toc-title-container"><p class="ez-toc-title" style="cursor:inherit">目錄</p>
