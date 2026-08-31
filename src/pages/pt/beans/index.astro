@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const page = {
+  title: "Beans - Especialista em produção de batata no norte da China",
+  h1: "Beans - Especialista em produção de batata no norte da China",
+  description: "",
+  canonical: "/pt/beans/",
+  author: " ",
+  date: "2024-10-05",
+};
+const hreflang = "<link rel=\"alternate\" hreflang=\"pt\" href=\"https://dinweys.com/pt/beans/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/beans/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/beans/\" />";
+---
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="website" lang="pt" author=" "  datePublished="2024-10-05" dateModified="2024-10-05">
+  <article class="page-content">
+    <h1 class="page-title">{page.h1}</h1>
+    <div class="entry-content" set:html={`<p></p>`} />
+  </article>
+</BaseLayout>

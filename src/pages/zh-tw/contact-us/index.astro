@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const page = {
+  title: "接觸 - 中國北方馬鈴薯生產專家",
+  h1: "接觸 - 中國北方馬鈴薯生產專家",
+  description: "王馬丁",
+  canonical: "/zh-tw/contact-us/",
+  author: " ",
+  date: "2024-09-02",
+};
+const hreflang = "<link rel=\"alternate\" hreflang=\"zh-tw\" href=\"https://dinweys.com/zh-tw/contact-us/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/contact-us/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/contact-us/\" />";
+---
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="website" lang="zh-TW" ogImage="/images/company-building-1.jpg" author=" "  datePublished="2024-09-02" dateModified="2024-09-02">
+  <article class="page-content">
+    <h1 class="page-title">{page.h1}</h1>
+    <div class="entry-content" set:html={`<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><strong>接觸</strong></h2><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="/images/company-building-1-1024x598.jpg" decoding="async" width="1024" height="598" alt="Company Building" class="wp-image-209" style="width:575px;height:auto" title="接觸樓" /><figcaption class="wp-element-caption"><strong>總部大樓</strong>: #3 建築, 北矽谷, Qiaodong District, Zhangjiakou City, hebei, 中國.</figcaption></figure></div><div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex"><div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"><h2 class="wp-block-heading"><strong>聯繫專家</strong></h2></div></div><div style="height:27px" aria-hidden="true" class="wp-block-spacer"></div><p class="wp-block-paragraph"><strong>王馬丁</strong></p><hr class="wp-block-separator alignwide has-alpha-channel-opacity"/><p class="has-medium-font-size wp-block-paragraph"><strong>地址:</strong> #3 建築, 北矽谷, Qiaodong District, Zhangjiakou City, hebei, 中國.</p><p class="has-medium-font-size wp-block-paragraph"><strong>電話 | WhatsApp | 微信:</strong> +86 13323237275</p><p class="has-medium-font-size wp-block-paragraph" style="text-transform:none"><strong>電子郵件: </strong><a href="mailto:martin@dinweys.com">martin@dinweys.com</a></p><div style="height:112px" aria-hidden="true" class="wp-block-spacer"></div><p class="wp-block-paragraph"><strong>亞倫</strong>.<strong>王</strong></p><hr class="wp-block-separator alignwide has-alpha-channel-opacity"/><p class="has-medium-font-size wp-block-paragraph"><strong>電話 | WhatsApp | 微信:</strong> +86 13313137465</p><p class="has-medium-font-size wp-block-paragraph" style="text-transform:none"><strong>電子郵件: </strong><a href="mailto:aaron@dinweys.com">aaron@dinweys.com</a></p><p class="wp-block-paragraph"></p>`} />
+  </article>
+</BaseLayout>

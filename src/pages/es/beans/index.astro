@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const page = {
+  title: "Frijoles - Experto en producción de patatas en el norte de China",
+  h1: "Frijoles - Experto en producción de patatas en el norte de China",
+  description: "",
+  canonical: "/es/beans/",
+  author: " ",
+  date: "2024-10-05",
+};
+const hreflang = "<link rel=\"alternate\" hreflang=\"es\" href=\"https://dinweys.com/es/beans/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/beans/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/beans/\" />";
+---
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="website" lang="es" author=" "  datePublished="2024-10-05" dateModified="2024-10-05">
+  <article class="page-content">
+    <h1 class="page-title">{page.h1}</h1>
+    <div class="entry-content" set:html={`<p></p>`} />
+  </article>
+</BaseLayout>

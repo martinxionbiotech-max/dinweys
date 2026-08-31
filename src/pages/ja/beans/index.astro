@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const page = {
+  title: "豆 - 中国北部のジャガイモ生産専門家",
+  h1: "豆 - 中国北部のジャガイモ生産専門家",
+  description: "",
+  canonical: "/ja/beans/",
+  author: " ",
+  date: "2024-10-05",
+};
+const hreflang = "<link rel=\"alternate\" hreflang=\"ja\" href=\"https://dinweys.com/ja/beans/\" /> <link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys.com/beans/\" /> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dinweys.com/beans/\" />";
+---
+<BaseLayout title={page.title} hreflang={hreflang} description={page.description} canonical={page.canonical} ogType="website" lang="ja" author=" "  datePublished="2024-10-05" dateModified="2024-10-05">
+  <article class="page-content">
+    <h1 class="page-title">{page.h1}</h1>
+    <div class="entry-content" set:html={`<p></p>`} />
+  </article>
+</BaseLayout>
