@@ -1,0 +1,96 @@
+---
+const currentLang = Astro.url.pathname.split("/")[1];
+const LANG_CODES = ["zh", "zh-tw", "ar", "fr", "de", "it", "ja", "ko", "pt", "ru", "es", "th"];
+const isLangPage = LANG_CODES.includes(currentLang);
+const prefix = isLangPage ? `/${currentLang}` : "";
+
+const languages = [
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "zh", name: "中文", flag: "🇨🇳" },
+  { code: "zh-tw", name: "繁體中文", flag: "🇹🇼" },
+  { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "it", name: "Italiano", flag: "🇮🇹" },
+  { code: "ja", name: "日本語", flag: "🇯🇵" },
+  { code: "ko", name: "한국어", flag: "🇰🇷" },
+  { code: "pt", name: "Português", flag: "🇵🇹" },
+  { code: "ru", name: "Русский", flag: "🇷🇺" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "th", name: "ไทย", flag: "🇹🇭" },
+];
+
+// 导航项（slug 保持英文，多语言不本地化）
+const NAV = [
+  { label: "Home", href: "/", key: "home" },
+  { label: "About Us", href: "/about-us/", key: "about-us" },
+  { label: "Our Products", href: "/products/", key: "products" },
+  { label: "Blog", href: "/blog/", key: "blog" },
+  { label: "Contact", href: "/contact-us/", key: "contact-us" },
+];
+
+// 导航项的本地化标签
+const NAV_LABELS: Record<string, Record<string, string>> = {
+  zh: { "home": "首页", "about-us": "关于我们", "products": "产品", "blog": "博客", "contact-us": "联系我们" },
+  "zh-tw": { "home": "首頁", "about-us": "關於我們", "products": "產品", "blog": "博客", "contact-us": "聯繫我們" },
+  ar: { "home": "الرئيسية", "about-us": "من نحن", "products": "منتجاتنا", "blog": "المدونة", "contact-us": "اتصل بنا" },
+  fr: { "home": "Accueil", "about-us": "À propos", "products": "Produits", "blog": "Blog", "contact-us": "Contact" },
+  de: { "home": "Startseite", "about-us": "Über uns", "products": "Produkte", "blog": "Blog", "contact-us": "Kontakt" },
+  it: { "home": "Home", "about-us": "Chi siamo", "products": "Prodotti", "blog": "Blog", "contact-us": "Contatti" },
+  ja: { "home": "ホーム", "about-us": "私たちについて", "products": "製品", "blog": "ブログ", "contact-us": "お問い合わせ" },
+  ko: { "home": "홈", "about-us": "회사 소개", "products": "제품", "blog": "블로그", "contact-us": "문의하기" },
+  pt: { "home": "Início", "about-us": "Sobre nós", "products": "Produtos", "blog": "Blog", "contact-us": "Contato" },
+  ru: { "home": "Главная", "about-us": "О нас", "products": "Продукция", "blog": "Блог", "contact-us": "Контакты" },
+  es: { "home": "Inicio", "about-us": "Nosotros", "products": "Productos", "blog": "Blog", "contact-us": "Contacto" },
+  th: { "home": "หน้าแรก", "about-us": "เกี่ยวกับเรา", "products": "สินค้า", "blog": "บล็อก", "contact-us": "ติดต่อ" },
+};
+
+// 当前页 slug（用于语言切换时保持路径）
+const pathParts = Astro.url.pathname.split("/").filter(Boolean);
+const currentSlug = isLangPage ? pathParts.slice(1).join("/") : pathParts.join("/");
+
+const langForLink = (code: string) => {
+  if (code === "en") return currentSlug ? `/${currentSlug}/` : "/";
+  return `/${code}/${currentSlug}/`;
+};
+
+// 生成导航链接（slug 保持英文，但标签本地化）
+const navHref = (key: string) => {
+  if (key === "home") return `${prefix}/`;
+  return `${prefix}/${key}/`;
+};
+const navLabel = (key: string, label: string) => {
+  return isLangPage ? (NAV_LABELS[currentLang]?.[key] ?? label) : label;
+};
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={`${prefix}/`}>
+      <img src="/images/logo2.png" alt="Dinweys - Northern China Potato Production Expert" width="48" height="48" loading="eager" />
+      <span class="brand-text">DINWEYS</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      {NAV.map((item) => (
+        <a
+          href={navHref(item.key)}
+          class={Astro.url.pathname.replace(/\/+$/, "").endsWith(item.key) || (item.key === "home" && Astro.url.pathname === `${prefix}/`) ? "active" : undefined}
+        >
+          {navLabel(item.key, item.label)}
+        </a>
+      ))}
+    </nav>
+
+    <div class="lang-switch">
+      <details class="nav-drop">
+        <summary>{languages.find((l) => l.code === (isLangPage ? currentLang : "en"))?.flag ?? "🌐"}</summary>
+        <div class="nav-drop-menu">
+          {languages.map((l) => (
+            <a href={langForLink(l.code)}>{l.flag} {l.name}</a>
+          ))}
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

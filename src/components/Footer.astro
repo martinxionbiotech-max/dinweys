@@ -1,0 +1,52 @@
+---
+const year = new Date().getFullYear();
+const currentLang = Astro.url.pathname.split("/")[1];
+const LANG_CODES = ["zh", "zh-tw", "ar", "fr", "de", "it", "ja", "ko", "pt", "ru", "es", "th"];
+const isLangPage = LANG_CODES.includes(currentLang);
+const prefix = isLangPage ? `/${currentLang}` : "";
+
+// 快捷链接（slug 保持英文）
+const links = [
+  { label: "About Us", href: "/about-us/" },
+  { label: "Our Products", href: "/products/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Contact", href: "/contact-us/" },
+  { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms and Conditions", href: "/terms-and-condition/" },
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="/images/cropped-logo2-2.jpg" alt="Dinweys Company Logo" width="142" height="75" loading="lazy" />
+      </div>
+      <p class="footer-tagline">Provide the best potato products</p>
+    </div>
+
+    <div class="footer-col">
+      <h2>Quick Links</h2>
+      <address>
+        {links.map((l) => (
+          <p><a href={`${prefix}${l.href}`}>{l.label}</a></p>
+        ))}
+      </address>
+    </div>
+
+    <div class="footer-col">
+      <h2>Head Office</h2>
+      <address>
+        <p><strong>Phone:</strong> +86 13323237275</p>
+        <p><strong>Email:</strong> <a href="mailto:martin@dinweys.com">martin@dinweys.com</a></p>
+        <p><strong>Address:</strong> 3# Building, North Silicon Valley, Qiaodong District, Zhangjiakou City, Hebei, China</p>
+      </address>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {year} COPYRIGHT DINWEYS CO LTD</p>
+    </div>
+  </div>
+</footer>
