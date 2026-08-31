@@ -177,6 +177,7 @@ const breadcrumbJsonLd = {
     <meta property="og:locale" content={lang === "en" ? "en_US" : lang} />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage.startsWith("http") ? ogImage : SITE + ogImage} />
