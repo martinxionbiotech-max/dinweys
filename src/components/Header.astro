@@ -51,7 +51,7 @@ const currentSlug = isLangPage ? pathParts.slice(1).join("/") : pathParts.join("
 
 const langForLink = (code: string) => {
   if (code === "en") return currentSlug ? `/${currentSlug}/` : "/";
-  return `/${code}/${currentSlug}/`;
+  return currentSlug ? `/${code}/${currentSlug}/` : `/${code}/`;
 };
 
 // 生成导航链接（slug 保持英文，但标签本地化）
