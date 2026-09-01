@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 const page = {
   title: "Global Manufacturer of Premium Potato Products",
   h1: "Global Manufacturer of Premium Potato Products",
@@ -16,80 +15,98 @@ const hreflang = "<link rel=\"alternate\" hreflang=\"en\" href=\"https://dinweys
   <section class="hero">
     <div class="container">
       <h1>Global Manufacturer of Premium Potato-Based Ingredients</h1>
-      <p class="lead"><em>Specializing in Potato Flakes, Starches, Flours, and Frozen Fries</em></p>
+      <p class="lead">Specializing in potato flakes, starches, flours, and frozen fries — sourced direct from our factory in North China's 41°N potato zone, shipped worldwide.</p>
       <div class="hero-actions">
-        <a class="btn" href="/products/">Our Products</a>
-        <a class="btn outline" href="/contact-us/">Get a Quote</a>
+        <a class="btn white" href="/products/">Explore Products</a>
+        <a class="btn ghost-hero" href="/contact-us/">Get a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>18+</b><span>Product lines</span></div>
+        <div><b>40+</b><span>Export countries</span></div>
+        <div><b>ISO·HACCP·BRC</b><span>Certifications</span></div>
       </div>
     </div>
   </section>
 
+  <!-- Factory banner -->
   <div class="container">
-    <article class="page-content">
-      <!-- Factory banner -->
-      <section class="section">
-        <img src="/images/Food-Factory1-1024x456.jpg" fetchpriority="high" decoding="async" width="1024" height="456" alt="food materials processing line" style="object-position:55% 85%" />
-      </section>
+    <section class="section">
+      <img src="/images/Food-Factory1-1024x456.jpg" fetchpriority="high" decoding="async" width="1024" height="456" alt="food materials processing line" style="object-position:55% 85%;object-fit:cover;border-radius:var(--radius)" />
+    </section>
 
-      <!-- Tagline -->
-      <section class="section" style="padding-top:0">
-        <h2 class="section-title" style="text-align:center;color:var(--primary-dark)">High-quality Potato Flakes, French Fries, Starch Manufacturer and Supplier</h2>
-      </section>
+    <!-- Tagline -->
+    <section class="section" style="padding-top:0;text-align:center">
+      <span class="kicker">Who we are</span>
+      <h2 class="sec-title" style="max-width:760px;margin:0 auto">High-quality Potato Flakes, French Fries, Starch Manufacturer and Supplier</h2>
+    </section>
 
-      <!-- Potato field -->
-      <img src="/images/Dinweys-potato-field.jpg" decoding="async" width="893" height="192" alt="potato materials field" />
-
-      <!-- Our Advantages -->
-      <h2 class="section-title" style="text-align:center" id="our-advantages">OUR ADVANTAGES</h2>
+    <!-- Our Advantages -->
+    <section class="section" style="padding-top:0">
+      <span class="kicker">Why choose us</span>
+      <h2 class="sec-title">Our Advantages</h2>
       <div class="table-wrap">
         <table class="data-table">
           <tbody>
-            <tr><td><strong>Location &amp; Raw Material</strong></td><td>Located in Hebei, China: Positioned within the <strong>41° N latitude Potato Growing Zone</strong>, offering a climate and vast geographical area ideal for superior potato cultivation. Proximity to major high-quality potato planting bases and key export ports.</td></tr>
-            <tr><td><strong>Technical Advantage</strong></td><td>Expertise in Potato Deep Processing: Led by top Chinese food industry experts specializing in potato ingredient functional development and process engineering. We utilize the <strong>most advanced production lines</strong> to guarantee product processing quality and consistency.</td></tr>
-            <tr><td><strong>Quality &amp; Compliance</strong></td><td><strong>Comprehensive Certifications:</strong> We hold complete product qualification and safety systems, including <strong>ISO, HACCP, BRC, Halal</strong>, etc., ensuring global regulatory compliance. We maintain <strong>excellent production workers and food engineers</strong>, supported by <strong>perfect testing equipment and laboratories</strong> to guarantee stable and superior product quality.</td></tr>
-            <tr><td><strong>Supply Chain &amp; Capacity</strong></td><td><strong>Abundant Capacity:</strong> Our sufficient and stable production capacity can meet the diverse requirements of large international buyers and procurement orders.</td></tr>
-            <tr><td><strong>Service &amp; Partnership</strong></td><td>Proficient English Communication &amp; Flexible OEM: Comprehensive support for global clients, including private label customization for potato flakes and fries.</td></tr>
+            <tr><td><strong>Location &amp; Raw Material</strong></td><td>Located in Hebei, China: positioned within the <strong>41° N latitude Potato Growing Zone</strong>, offering a climate and vast geographical area ideal for superior potato cultivation. Proximity to major high-quality potato planting bases and key export ports.</td></tr>
+            <tr><td><strong>Technical Advantage</strong></td><td>Expertise in potato deep processing, led by top Chinese food industry experts specializing in potato ingredient functional development and process engineering. We utilize the <strong>most advanced production lines</strong> to guarantee product quality and consistency.</td></tr>
+            <tr><td><strong>Quality &amp; Compliance</strong></td><td><strong>Comprehensive certifications:</strong> ISO, HACCP, BRC, Halal — ensuring global regulatory compliance. Supported by <strong>excellent production workers, food engineers, and laboratories</strong> for stable, superior product quality.</td></tr>
+            <tr><td><strong>Supply Chain &amp; Capacity</strong></td><td><strong>Abundant capacity:</strong> stable production capacity to meet the diverse requirements of large international buyers and procurement orders.</td></tr>
+            <tr><td><strong>Service &amp; Partnership</strong></td><td>Proficient English communication &amp; flexible OEM — comprehensive support including private label customization for potato flakes and fries.</td></tr>
             <tr><td><strong>Client Endorsement</strong></td><td>Clients include well-known global brands (Pepsi China, Orion, Dali, Unify Thailand). Stable quality and timely supply are proven.</td></tr>
           </tbody>
         </table>
       </div>
+    </section>
 
-      <!-- Core Products -->
-      <h2 class="section-title" style="text-align:center;color:var(--primary);text-transform:uppercase" id="food-materials-product-range">Our Core Potato Products Portfolio</h2>
+    <!-- Core Products -->
+    <section class="section">
+      <span class="kicker">Product range</span>
+      <h2 class="sec-title">Our Core Potato Products Portfolio</h2>
       <div class="card-grid">
         <div class="card">
-          <img src="/images/Dinweys-Potato-flakes-1024x1024.jpg" decoding="async" width="1024" height="1024" alt="Potato Flakes" />
-          <h3 style="text-align:center">Potato Flakes</h3>
-          <p>From standard to high-grade varieties, our potato flakes are designed to meet diverse industry needs.</p>
-          <p>Backed by <strong>FSSC certification</strong>, we have a strong global export track record.</p>
-          <p>We specialize in <strong>OEM solutions</strong>, allowing us to customize specifications to your exact requirements.</p>
+          <div class="thumb"><img src="/images/Dinweys-Potato-flakes-1024x1024.jpg" alt="Potato Flakes" loading="lazy" /></div>
+          <div class="body">
+            <span class="cat">Potato</span>
+            <h3>Potato Flakes</h3>
+            <p>From standard to high-grade varieties, designed to meet diverse industry needs.</p>
+            <p class="small muted">Backed by <strong>FSSC certification</strong> and a strong global export track record with <strong>OEM solutions</strong>.</p>
+            <a class="link" href="/dinweys-bulk-potato-flakes/">View product →</a>
+          </div>
         </div>
         <div class="card">
-          <img src="/images/Dinweys-french-fries.jpg" decoding="async" width="632" height="632" alt="Frozen French Fries" />
-          <h3 style="text-align:center">Frozen French Fries</h3>
-          <p>Our ISO-certified facility produces high-quality frozen French fries available in <strong>various cuts and sizes</strong>.</p>
-          <p>We pride ourselves on flexibility, offering <strong>bespoke OEM services</strong> to align perfectly with your brand and customer preferences.</p>
+          <div class="thumb"><img src="/images/Dinweys-french-fries.jpg" alt="Frozen French Fries" loading="lazy" /></div>
+          <div class="body">
+            <span class="cat">Frozen</span>
+            <h3>Frozen French Fries</h3>
+            <p>ISO-certified facility producing fries in <strong>various cuts and sizes</strong>.</p>
+            <p class="small muted">Flexible <strong>bespoke OEM services</strong> to align with your brand.</p>
+            <a class="link" href="/1-4-french-fries-mccain-in-bulk-manufacturer-direct/">View product →</a>
+          </div>
         </div>
         <div class="card">
-          <img src="/images/potato-starch-1024x1024.jpg" decoding="async" width="1024" height="1024" alt="Potato Starch" />
-          <h3 style="text-align:center">Potato Starch</h3>
-          <p>Engineered for versatility, our potato starch is a <strong>Grade A product</strong> produced in strict accordance with Chinese National Standards.</p>
-          <p>Its superior quality makes it the ideal choice for applications across multiple sectors, ensuring consistency and performance.</p>
+          <div class="thumb"><img src="/images/potato-starch-1024x1024.jpg" alt="Potato Starch" loading="lazy" /></div>
+          <div class="body">
+            <span class="cat">Starch &amp; Flour</span>
+            <h3>Potato Starch</h3>
+            <p><strong>Grade A product</strong> produced in strict accordance with Chinese National Standards.</p>
+            <p class="small muted">Ideal for applications across multiple sectors, ensuring consistency and performance.</p>
+            <a class="link" href="/dinweys-potato-flour-mashed-potato-flakes/">View product →</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Bottom field -->
-      <img src="/images/Dinweys-potato-field1-1024x168.jpg" decoding="async" width="1024" height="168" alt="Food materials | raw potatoes" style="width:100%;margin-top:2rem" />
-    </article>
+    <!-- Potato field banner -->
+    <img src="/images/Dinweys-potato-field1-1024x168.jpg" decoding="async" width="1024" height="168" alt="Food materials | raw potatoes" style="width:100%;margin:2rem 0;border-radius:var(--radius)" />
   </div>
 
   <!-- Contact CTA -->
   <section class="cta-band" style="border-radius:0;margin:3rem 0 0">
     <div class="container">
       <h2 style="text-align:center">Please Feel Free to Contact Us</h2>
-      <p style="color:#fff"><strong>Address:</strong>&nbsp;#3, building North Silicon Valley, Qiaodong District, Zhangjiakou City, China.</p>
-      <p style="color:#fff"><strong>Phone | WhatsApp | WeChat:</strong>&nbsp;+86 13323237275</p>
-      <p style="color:#fff"><strong>Email:</strong>&nbsp;<a href="mailto:martin@dinweys.com" style="color:#fff">martin@dinweys.com</a></p>
+      <p><strong>Address:</strong>&nbsp;#3, building North Silicon Valley, Qiaodong District, Zhangjiakou City, China.</p>
+      <p><strong>Phone | WhatsApp | WeChat:</strong>&nbsp;+86 13323237275</p>
+      <p><strong>Email:</strong>&nbsp;<a href="mailto:martin@dinweys.com" style="color:#fff">martin@dinweys.com</a></p>
       <p style="color:rgba(255,255,255,0.8)"><strong>Chinese Site</strong>: <a href="https://www.dinweys.cn/" rel="nofollow noopener" target="_blank" style="color:#fff">dinweys.cn</a></p>
     </div>
   </section>
